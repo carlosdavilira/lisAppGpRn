@@ -13,22 +13,38 @@ import {
   ScrollView,
   View,
   Text,
-  StatusBar
+  StatusBar,
+  FlatList,
 } from 'react-native';
-
+import ElementoLista from './src/ElementoLista'
 import {
   Header,
   LearnMoreLinks,
   Colors,
   DebugInstructions,
   ReloadInstructions,
+  
 } from 'react-native/Libraries/NewAppScreen';
 
-class App extends Component{
+export default class App extends Component{
+  state = {
+    lista: 
+    [
+      {id:"1", imgSrc:"./imagens/img1.jpg"},
+      {id:"2", imgSrc:"./imagens/img1.jpg"},
+      {id:"3", imgSrc:"./imagens/img1.jpg"},
+      {id:"4", imgSrc:"./imagens/img1.jpg"},
+      {id:"5", imgSrc:"./imagens/img1.jpg"}  
+
+    ]
+  }
+
   render(){
     return (
       <View style={styles.body}>
-        <Text > Texto Qualquer</Text>
+        <Text > React Native - GP</Text>
+        <FlatList data={this.state.lista} keyExtractor={item => `${item.id}`} renderItem={({item}) => <ElementoLista {...item}/>} />
+      
       </View>
     );
   }
@@ -73,4 +89,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+//export default App;
