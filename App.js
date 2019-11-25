@@ -25,6 +25,7 @@ import {
   ReloadInstructions,
   
 } from 'react-native/Libraries/NewAppScreen';
+import { bold } from 'ansi-colors';
 
 export default class App extends Component{
   state = {
@@ -34,7 +35,23 @@ export default class App extends Component{
       {id:"2", imgSrc:"./imagens/img1.jpg"},
       {id:"3", imgSrc:"./imagens/img1.jpg"},
       {id:"4", imgSrc:"./imagens/img1.jpg"},
-      {id:"5", imgSrc:"./imagens/img1.jpg"}  
+      {id:"5", imgSrc:"./imagens/img1.jpg"},
+      {id:"6", imgSrc:"./imagens/img1.jpg"},
+      {id:"7", imgSrc:"./imagens/img1.jpg"},
+      {id:"8", imgSrc:"./imagens/img1.jpg"},
+      {id:"9", imgSrc:"./imagens/img1.jpg"},
+      {id:"10", imgSrc:"./imagens/img1.jpg"},
+      {id:"11", imgSrc:"./imagens/img1.jpg"},
+      {id:"12", imgSrc:"./imagens/img1.jpg"},
+      {id:"13", imgSrc:"./imagens/img1.jpg"},
+      {id:"14", imgSrc:"./imagens/img1.jpg"},
+      {id:"15", imgSrc:"./imagens/img1.jpg"},
+      {id:"16", imgSrc:"./imagens/img1.jpg"},
+      {id:"17", imgSrc:"./imagens/img1.jpg"},
+      {id:"18", imgSrc:"./imagens/img1.jpg"},
+      {id:"19", imgSrc:"./imagens/img1.jpg"},
+      {id:"20", imgSrc:"./imagens/img1.jpg"} 
+
 
     ]
   }
@@ -42,7 +59,7 @@ export default class App extends Component{
   render(){
     return (
       <View style={styles.body}>
-        <Text > React Native - GP</Text>
+        <Text style={styles.textTabBar} > React Native - GP</Text>
         <FlatList data={this.state.lista} keyExtractor={item => `${item.id}`} renderItem={({item}) => <ElementoLista {...item}/>} />
       
       </View>
@@ -87,6 +104,15 @@ const styles = StyleSheet.create({
     paddingRight: 12,
     textAlign: 'right',
   },
+  textTabBar:{
+    backgroundColor:'#FFA000',
+    height:45,
+    textAlign:"center",
+    color:Colors.white,
+    textAlignVertical:"center",
+    fontSize:18   
+
+  }
 });
 
 //export default App;

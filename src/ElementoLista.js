@@ -9,8 +9,7 @@ import {
 export default function(item){
     return (
       <View >
-        <Text > Elemento lista {item.id}</Text>
-        <Image source={require('./imagens/img1.jpg')} style={{height:200}}/>
+        <Image source={require('./imagens/img1.jpg')} style={{height:200,width:600,aspectRatio:1.8}}/>
          
        
       </View>
